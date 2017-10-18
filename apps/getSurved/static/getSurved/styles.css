@@ -1,0 +1,25 @@
+#wrapper{
+    margin: 0px auto;
+    height: 1000px;
+    width: 1000px;
+    background-color: green;
+    text-align: center;
+}
+
+#top{
+    height: 150px;
+    background-color: yellow;
+    width: 100%;
+}
+#wordbox{
+    margin: 20px;
+    height: 75px;
+    width: 500px;
+    background-color: white;
+    display: inline-block;
+}
+#bot{
+    height: 800px;
+    background-color: red;
+    width: 100%;
+}

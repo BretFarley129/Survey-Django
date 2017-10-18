@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Results</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'getSurved/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="top">
+            <h1>this for has been submitted {{request.session.count}} times</h1>
+        </div>
+        <div id="bot">
+            <h1>{{request.session.name}}</h1>
+            <h1>{{request.session.location}}</h1>
+            <h1>{{request.session.language}}</h1>
+            <h1>{{request.session.comment}}</h1>
+            <form name="return" method="post" action="/refresh">
+                {% csrf_token %}
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
